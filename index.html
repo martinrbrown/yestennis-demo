@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yes!Tennis — A Team Sport for Every Body</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Fictional site for accessibility training. This build intentionally
+       keeps 5 barriers, verified with axe-core after each content pass:
+
+         #1  .hero-photo-img   <img> with no alt attribute
+         #2  no h1-h6 anywhere — all section titles are styled <div>/<p>
+         #3a .inline-link      "Learn more" — ambiguous link text, no
+                               aria-label or surrounding context
+         #3b .footer-clickhere "Click here" — ambiguous link text, no
+                               surrounding context
+         #4  .cta-btn          orange text (#f2a35c) on white ≈ 2.2:1
+                               contrast, below the 3:1 threshold
+         #5  .footer-inline-link  color:inherit (matches surrounding
+                               footer text); underline removed on
+                               :hover/:focus so the only visual cue
+                               vanishes on interaction
+  ═══════════════════════════════════════════════════════════════ -->
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-logo"><span class="logo-dot" aria-hidden="true"></span>Yes!Tennis</a>
+      <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Find a session</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">Coaches</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow-pill">A team sport for every body</span>
+          <!-- BARRIER 2 — div, not a heading -->
+          <div class="hero-title">If you can hold a racquet, you can play. And everyone wins.</div>
+          <p class="hero-sub">Yes!Tennis puts four players on one court — two who run, two who walk, stand, or roll — rallying together instead of competing against each other.</p>
+          <div class="hero-actions">
+            <!-- BARRIER 4 — low-contrast button -->
+            <a href="#" class="cta-btn">Find a session near you</a>
+            <a href="#how-it-works" class="text-link">See how it works →</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <!-- BARRIER 1 — no alt attribute -->
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="hero-photo-img">
+          <p class="hero-photo-label">Photo placeholder</p>
+          <p class="hero-photo-caption">Mixed-ability doubles rally — runner, walker &amp; wheelchair player sharing the court</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS ═══════════════════════════════════════════
+         BARRIER 3a: "Learn more" below has no aria-label and no
+                     additional context inside the element.
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-title">How it works</div>
+        <p class="how-copy">Every Yes!Tennis team has four players sharing one court: two runners and two players who walk, stand, or use a wheelchair. Hitters alternate every point, so nobody carries or dominates the rally. Scoring rewards long, cooperative exchanges rather than winners and errors. The result feels less like a match and more like a shared game — friendly, social, and genuinely mixed-ability. <a href="#" class="inline-link">Learn more</a></p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY YES!TENNIS ═════════════════════════════════════════ -->
+    <section class="why" id="why">
+      <div class="container">
+        <div class="section-title">Why Yes!Tennis</div>
+        <div class="why-grid">
+          <article class="why-card">
+            <span class="why-icon why-icon--orange" aria-hidden="true"></span>
+            <p class="why-card-title">Built for mixed ability</p>
+            <p class="why-card-body">Runners, walkers, and wheelchair players share the same court and the same team — no separate leagues, no sidelining.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon why-icon--green" aria-hidden="true"></span>
+            <p class="why-card-title">Rally, don't compete</p>
+            <p class="why-card-body">Alternating hitters and cooperative scoring mean the point of the game is keeping the ball going, together.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon why-icon--mint" aria-hidden="true"></span>
+            <p class="why-card-title">Real community</p>
+            <p class="why-card-body">Sessions are social first — new players are paired with a regular team so nobody shows up alone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STORIES FROM THE COURT ═════════════════════════════════ -->
+    <section class="stories" id="stories">
+      <div class="container">
+        <div class="section-title">Stories from the court</div>
+        <div class="testimonials">
+          <blockquote class="testimonial">
+            <p>"I use a wheelchair and hadn't touched a racquet in fifteen years. My first session I actually rallied for ten shots straight. My teammates were cheering like I'd won Wimbledon."</p>
+            <cite>— Priya, player since 2024</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"My dad walks with a cane and I run cross country. Yes!Tennis is the only sport we've ever played on the same team."</p>
+            <cite>— Marcus, player since 2023</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ═════════════════════════════════════════════ -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-title">Ready to give it a swing?</div>
+        <p class="cta-sub">Sessions run weekly at courts across the region — all equipment provided.</p>
+        <!-- BARRIER 4 — second low-contrast button -->
+        <a href="#" class="cta-btn">Find a session near you</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════════
+       BARRIER 3b: "Click here" below has no aria-label and no
+                   surrounding context inside the element itself.
+       BARRIER 5:  .footer-inline-link has color:inherit (identical
+                   to surrounding paragraph text) with only an
+                   underline to distinguish it. The underline is
+                   removed on :hover and :focus, leaving keyboard
+                   and pointer users with no visual cue.
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">Yes!Tennis</span>
+        <p class="footer-note">A community initiative bringing runners, walkers, and wheelchair players together on the same court, one rally at a time.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Get involved</p>
+        <a href="#">Become a coach</a>
+        <a href="#">Membership</a>
+        <!-- BARRIER 3b — "Click here" -->
+        <a href="#" class="footer-clickhere">Click here</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Support</p>
+        <a href="#">FAQ</a>
+        <p class="footer-inline-text">Our full accessibility policy — <a href="#" class="footer-inline-link">click here</a></p>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2026 Yes!Tennis Community Initiative. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

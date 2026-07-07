@@ -171,43 +171,18 @@ body {
 .text-link:focus { text-decoration: underline; }
 
 .hero-photo {
-  position: relative;
-  background: var(--white);
   border-radius: 12px;
   box-shadow: var(--shadow);
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .375rem;
-  padding: 2rem;
-  text-align: center;
+  overflow: hidden;
+  aspect-ratio: 1400 / 781;
 }
 
 /* BARRIER 1 — this img has no alt attribute (see index.html) */
 .hero-photo-img {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.hero-photo-label {
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text-body);
-}
-
-.hero-photo-caption {
-  font-size: .8125rem;
-  color: var(--text-body);
-  max-width: 320px;
 }
 
 /* ── Section titles (shared) ──────────────────────────────────
